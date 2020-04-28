@@ -16,7 +16,6 @@ On the root folder
 - `$ npm run seed` initializes db with the provided non-lexical words
 - `$ npm run start` initialize the API on http://localhost:3000/
 - `$ npm run dev` initialize the API on dev
-- `$ npm run test` run tests
 
 ## API endpoints
 
