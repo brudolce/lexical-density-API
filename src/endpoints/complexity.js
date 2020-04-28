@@ -39,15 +39,15 @@ router.route('/')
   })
   .post((req, res) => {
     //body
-    let = { inputString } = req.body;
-    if (!inputString) res.status(400).send({ error: 'No user input received.' });
+    let = { inputText } = req.body;
+    if (!inputText) res.status(400).send({ error: 'No user input received.' });
 
     //querry
     let { mode } = req.query
     let overall_ld;
 
     if (mode === 'verbose') {
-      let sentence_ld = inputString.match(/[^\.\!\?]+/g);
+      let sentence_ld = inputText.match(/[^\.\!\?]+/g);
 
       Word.find({}).then(words => {
         let nonLexicalWords = words.map(el => el.term);
@@ -61,7 +61,7 @@ router.route('/')
     } else {
       Word.find({}).then(words => {
         let nonLexicalWords = words.map(el => el.term);
-        overall_ld = lexicalDensity(inputString, nonLexicalWords);
+        overall_ld = lexicalDensity(inputText, nonLexicalWords);
         res.json({
           data: { overall_ld }
         });
