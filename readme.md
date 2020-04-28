@@ -18,9 +18,9 @@ On the root folder
 - `$ npm run dev` initialize the API on dev
 - `$ npm run test` run tests
 
-## API routes
+## API endpoints
 
-To use the api, make a post request with a bodykey "inputString" and a string value with the content to be analyzed.
+To use the api, make a post request, the body should have a key `"inputString"` and a string value with the content to be analyzed.
 
 The following post routes are available. The second one is to have a lexical analysis of a bigger text, broken down by frases ended by '!' '.' or '?'
 - http://localhost:3000/complexity
