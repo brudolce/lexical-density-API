@@ -20,7 +20,9 @@ On the root folder
 ## API endpoints
 
 To use the api, make a post request to http://localhost:3000/complexity.
+
 The body should have a key `"inputText"` and a string value with the content to be analyzed.
+
 You can make a post request with a bigger text to http://localhost:3000/complexity?mode=verbose, the content will be broken by frases ended by '!' '.' or '?' and the lexical analysis done frase by frase.
 
 
