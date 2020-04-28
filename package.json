@@ -1,0 +1,25 @@
+{
+  "name": "express-api-lexical-density",
+  "version": "1.0.0",
+  "description": "API to calculate the lexical density of strings",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./src/server/index.js",
+    "dev": "nodemon ./src/server/index.js",
+    "test": "jest",
+    "seed": "node ./src/db/seeds.js"
+  },
+  "author": "Bruno Dolce",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "*",
+    "dotenv": "*",
+    "express": "*",
+    "morgan": "*",
+    "mongoose": "*"
+  },
+  "devDependencies": {
+    "jest": "*",
+    "nodemon": "*"
+  }
+}
