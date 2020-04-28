@@ -20,7 +20,7 @@ On the root folder
 
 ## API endpoints
 
-To use the api, make a post request, the body should have a key `"inputString"` and a string value with the content to be analyzed.
+To use the api, make a post request, the body should have a key `"inputText"` and a string value with the content to be analyzed.
 
 The following post routes are available. The second one is to have a lexical analysis of a bigger text, broken down by frases ended by '!' '.' or '?'
 - http://localhost:3000/complexity
