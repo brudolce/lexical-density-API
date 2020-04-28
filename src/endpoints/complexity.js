@@ -20,8 +20,8 @@ const lexicalDensity = (str, comparisonArr) => {
   if (sentences.length > 100) return false
 
   let res = sentences.filter(word => !comparisonArr.includes(word));
- 
-  return  Number((res.length / sentences.length).toFixed(2));
+
+  return Number((res.length / sentences.length).toFixed(2));
 };
 
 
@@ -40,7 +40,7 @@ router.route('/')
   .post((req, res) => {
     //body
     let = { inputText } = req.body;
-    if (!inputText) res.status(400).send({ error: 'No user input received.' });
+    if (!inputText) return res.status(400).send({ error: 'No inputText received in the post request' });
 
     //querry
     let { mode } = req.query
