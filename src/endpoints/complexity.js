@@ -17,15 +17,11 @@ const lexicalDensity = (str, comparisonArr) => {
     .replace(/[^a-z0-9\s]/g, '')
     .split(' ')
 
+  if (sentences.length > 100) return false
 
-  if (sentences.length > 100) {
-    return false
-  } else {
-    const wordCount = sentences.length;
-    let res = sentences.filter(word => !comparisonArr.includes(word));
-    let overall_ld = Number((res.length / wordCount).toFixed(2));
-    return overall_ld;
-  }
+  let res = sentences.filter(word => !comparisonArr.includes(word));
+ 
+  return  Number((res.length / sentences.length).toFixed(2));
 };
 
 
@@ -45,7 +41,7 @@ router.route('/')
     //body
     let = { inputString } = req.body;
     if (!inputString) res.status(400).send({ error: 'No user input received.' });
-    
+
     //querry
     let { mode } = req.query
     let overall_ld;
